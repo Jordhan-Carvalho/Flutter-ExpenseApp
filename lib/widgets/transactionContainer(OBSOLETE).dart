@@ -22,7 +22,7 @@ class TransactionContainer extends StatelessWidget {
             padding: EdgeInsets.all(10),
             decoration: BoxDecoration(
               border: Border.all(
-                color: Colors.purple,
+                color: Theme.of(context).primaryColor,
                 width: 2,
               ),
             ),
@@ -31,7 +31,7 @@ class TransactionContainer extends StatelessWidget {
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 20,
-                color: Colors.purple,
+                color: Theme.of(context).primaryColor,
               ),
             ),
           ),
@@ -40,10 +40,7 @@ class TransactionContainer extends StatelessWidget {
             children: <Widget>[
               Text(
                 tx.title,
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 16,
-                ),
+                style: Theme.of(context).textTheme.title,
               ),
               Text(
                 DateFormat('yMMMEd', 'pt-BR').format(tx.date),
