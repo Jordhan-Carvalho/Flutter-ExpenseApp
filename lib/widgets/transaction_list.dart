@@ -37,10 +37,15 @@ class TransactionList extends StatelessWidget {
                 );
               },
             )
+          // .builder is bugged with key, should use ListView with ValueKey
           : ListView.builder(
               itemBuilder: (ctx, index) {
                 // return TransactionContainer(userTransactions[index]); *SelfMade container
-                return ListItem(userTransactions[index], deleteTransaction);
+                return ListItem(
+                  key: new Key(userTransactions[index].id),
+                  tx: userTransactions[index],
+                  deleteTrans: deleteTransaction,
+                );
               },
               itemCount: userTransactions.length,
             ),

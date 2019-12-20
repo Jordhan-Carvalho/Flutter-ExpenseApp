@@ -80,6 +80,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
     }).toList();
   }
 
+// APP LIFECYCLE
   @override
   void initState() {
     WidgetsBinding.instance.addObserver(this);
