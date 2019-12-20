@@ -5,10 +5,11 @@ class ChartBar extends StatelessWidget {
   final double spendingAmount;
   final double spedingPctofTotal;
 
-  ChartBar({this.label, this.spendingAmount, this.spedingPctofTotal});
+  const ChartBar({this.label, this.spendingAmount, this.spedingPctofTotal});
 
   @override
   Widget build(BuildContext context) {
+    print('Build() chart Bar');
     // LayoutBuilder so we can get the dynamic sizes of this specific widget
     return LayoutBuilder(
       builder: (ctx, constraints) {

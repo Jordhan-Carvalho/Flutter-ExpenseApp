@@ -7,7 +7,9 @@ import './chart_bar.dart';
 class Chart extends StatelessWidget {
   final List<Transaction> recentTransactions;
 
-  Chart(this.recentTransactions);
+  Chart(this.recentTransactions) {
+    print('Contructor Chart');
+  }
 
 // getter proprieties that are calculated dynamic
   List<Map<String, Object>> get groupedTransactionValues {
@@ -45,6 +47,7 @@ class Chart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print('build() Chart');
     return Card(
       elevation: 6,
       margin: EdgeInsets.all(20),
